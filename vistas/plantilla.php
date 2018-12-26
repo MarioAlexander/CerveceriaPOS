@@ -37,11 +37,15 @@
 </head>
 
 
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-blue sidebar-mini login-page">
 <!-- Site wrapper -->
-<div class="wrapper">
 
   <?php 
+
+    if(isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok"){
+
+
+  echo '<div class="wrapper">';
 
       include "modulos/header.php";
       include "modulos/menu.php";
@@ -70,11 +74,18 @@
       include "modulos/inicio.php";
 
     }
-      include "modulos/footer.php"
+      include "modulos/footer.php";
+
+   echo '</div>';
+
+    }else{
+
+    include "modulos/login.php";
+
+  }
 
    ?>
 
-</div>
 <!-- ./wrapper -->
 
 <script src="vistas/js/plantilla.js"></script>
