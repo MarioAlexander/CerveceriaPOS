@@ -43,7 +43,31 @@
 
       include "modulos/header.php";
       include "modulos/menu.php";
-      include "modulos/contenido.php";
+      if(isset($_GET["ruta"])){
+
+      if($_GET["ruta"] == "inicio" ||
+         $_GET["ruta"] == "usuarios" ||
+         $_GET["ruta"] == "proveedores" ||
+         $_GET["ruta"] == "productos" ||
+         $_GET["ruta"] == "clientes" ||
+         $_GET["ruta"] == "ventas" ||
+         $_GET["ruta"] == "crear-venta" ||
+         $_GET["ruta"] == "reportes" ||
+         $_GET["ruta"] == "salir"){
+
+        include "modulos/".$_GET["ruta"].".php";
+
+      }else{
+
+        include "modulos/404.php";
+
+      }
+
+    }else{
+
+      include "modulos/inicio.php";
+
+    }
       include "modulos/footer.php"
 
    ?>
