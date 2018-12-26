@@ -7,7 +7,6 @@ require_once "controladores/productos.controlador.php";
 require_once "controladores/proveedores.controlador.php"; 
 require_once "controladores/ventas.controlador.php"; 
 
-require_once "modelos/plantilla.modelo.php"; 
 require_once "modelos/usuarios.modelo.php"; 
 require_once "modelos/clientes.modelo.php"; 
 require_once "modelos/productos.modelo.php"; 
