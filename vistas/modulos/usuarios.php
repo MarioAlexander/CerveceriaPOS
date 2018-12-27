@@ -34,7 +34,7 @@
 
       <div class="box-body">
         
-       <table class="table table-bordered table-striped dt-responsive dt-responsive tablas">
+       <table class="table table-bordered table-striped dt-responsive dt-responsive tablas" width="100%">
          
         <thead>
          
@@ -176,7 +176,7 @@ MODAL AGREGAR USUARIO
               
                 <span class="input-group-addon"><i class="fa fa-key"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevoUsuario" placeholder="Ingresar usuario" required>
+                <input type="text" class="form-control input-lg" name="nuevoUsuario" placeholder="Ingresar usuario" id="nuevoUsuario" required>
 
               </div>
 
@@ -262,6 +262,9 @@ MODAL AGREGAR USUARIO
 
 </div>
 
+<!--=====================================
+MODAL EDITAR USUARIO
+======================================-->
 
 <div id="modalEditarUsuario" class="modal fade" role="dialog">
   
@@ -306,6 +309,7 @@ MODAL AGREGAR USUARIO
             </div>
 
             <!-- ENTRADA PARA EL USUARIO -->
+
 
              <div class="form-group">
               
@@ -407,3 +411,9 @@ MODAL AGREGAR USUARIO
  
 </div>
 
+<?php
+
+  $borrarUsuario = new ControladorUsuarios();
+  $borrarUsuario -> ctrBorrarUsuario();
+
+?> 
